@@ -1,0 +1,304 @@
+/*
+================================
+  ESTILOS GENERALES Y TIPOGRAFÍA (FONDO OSCURO)
+================================
+*/
+:root {
+    --primary-color: #ffffff; /* Color principal para el texto (Blanco) */
+    --secondary-color: #1a1a1a; /* Fondo oscuro casi negro */
+    --accent-color: #b8860b; /* Dorado/Cobre para acentos */
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --border-gray: #444444; /* Gris oscuro para líneas divisorias */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    color: var(--text-light); /* Texto blanco */
+    line-height: 1.6;
+}
+
+/* Estilo fuerte para encabezados */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: var(--primary-color); /* Texto blanco sobre fondo oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Separador simple y limpio */
+.separator {
+    max-width: 600px;
+    margin: 40px auto;
+    border: none;
+    border-top: 1px solid var(--border-gray);
+}
+
+/*
+================================
+         HEADER Y LOGO
+================================
+*/
+.header {
+    background-color: var(--text-dark); /* Franja de logo muy oscura */
+    padding: 30px 5%;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    border-bottom: 5px solid var(--border-gray);
+}
+
+.logo-image {
+    /* Estilo para la imagen del logo en escritorio */
+    max-width: 300px; /* Tamaño que solicitaste */
+    height: auto; /* Mantiene la proporción */
+    display: block; 
+}
+
+/*
+================================
+        CONTENIDO PRINCIPAL
+================================
+*/
+.main-content {
+    padding: 40px 5%;
+    max-width: 700px; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section {
+    padding-bottom: 0px;
+}
+
+.hero-section h2 {
+    font-size: 3.5em;
+    color: var(--primary-color); 
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--border-gray); 
+}
+
+/*
+================================
+         LISTADO DE PRECIOS
+================================
+*/
+.services-section {
+    padding: 0px 0;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--accent-color); /* Título de la sección en acento (Dorado/Cobre) */
+}
+
+.price-list {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--border-gray);
+    text-transform: uppercase;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.service-price {
+    font-weight: 900;
+    font-size: 1.2em;
+    color: var(--accent-color); /* Precio destacado en Dorado/Cobre */
+}
+
+/*
+================================
+        BOTÓN DE CITA (CTA)
+================================
+*/
+.cta-section {
+    padding: 20px 0 0;
+}
+
+.appointment-button {
+    display: inline-block;
+    background-color: var(--accent-color); /* Fondo del botón de acento */
+    color: var(--text-dark); /* Texto oscuro en el botón */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 15px 40px;
+    border: 3px solid var(--accent-color); 
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    letter-spacing: 2px;
+}
+
+.appointment-button:hover {
+    background-color: var(--text-dark); /* Invertir colores al pasar el mouse */
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/*
+================================
+  ESTILOS PARA CONTACTO Y MAPA (GENERAL)
+================================
+*/
+.contact-map-section {
+    padding: 40px 5%;
+    max-width: 900px; /* Ancho mayor para el mapa */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+/* Contenedor del mapa para hacerlo responsive */
+.map-container {
+    overflow: hidden; /* Asegura que el iframe no se salga */
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura/ancho) */
+    position: relative;
+    height: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 3px solid var(--accent-color) !important; /* Borde de acento para el mapa */
+}
+
+/*
+================================
+            FOOTER
+================================
+*/
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--text-dark);
+    color: var(--border-gray);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/*
+================================
+        MEDIA QUERY (RESPONSIVE)
+================================
+*/
+@media (max-width: 600px) {
+    /* Ajustes específicos para móviles */
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .logo-image {
+        max-width: 100px; /* Logo más pequeño en móvil */
+    }
+
+    .hero-section h2 {
+        font-size: 2.5em; 
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    .section-title {
+        font-size: 1.6em;
+    }
+
+    .price-item {
+        /* Apila el nombre y el precio en móvil */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .service-name {
+        margin-bottom: 5px;
+    }
+
+    .service-price {
+        font-size: 1.1em;
+    }
+
+    .appointment-button {
+        font-size: 1em;
+        padding: 15px 30px;
+        letter-spacing: 1px;
+    }
+
+    /* Ajustes para el mapa en móvil si fueran necesarios, pero el diseño ya es adaptable */
+    .map-container {
+        padding-bottom: 75%; /* Se puede hacer el mapa un poco más alto en móvil (relación 4:3) */
+    }
+
+    /*
+    ================================
+    ESTILOS PARA ENLACES DE CONTACTO
+    ================================
+    */
+    .contact-link {
+        /* Mantiene el color del texto de contacto (blanco) */
+        color: var(--text-light); 
+        /* Elimina el subrayado por defecto de los enlaces */
+        text-decoration: none; 
+        /* Mantiene el grosor del texto normal */
+        font-weight: 400; 
+        transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+        /* Efecto sutil al pasar el ratón */
+        color: var(--accent-color); 
+    }
+}
